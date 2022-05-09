@@ -1,0 +1,110 @@
+nav#menu{
+    top: 0;
+}
+nav#menu ul{
+    background-color: rgb(255, 1, 77);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav#menu ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+nav#menu ul li a{
+    white-space: nowrap;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: inherit;    
+
+}
+#menu > ul > li:first-child{
+    display: none;
+}
+/* SOUS MENU*/
+#menu ul ul {
+    display: none;
+}
+#menu ul li:hover ul {
+    display: block;
+}
+#menu ul ul li a{
+    width:200px;
+}
+#menu ul ul ul {
+    left:240px;
+    top:0;
+}
+#menu ul li:hover ul ul {
+    display: none;
+}
+#menu ul ul li:hover ul {
+    display: block;
+}
+/*********mega menu*******/
+.mega-menu {
+
+    color: black;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+
+}
+.mega:hover .mega-menu {
+    display: flex;
+
+}
+#menu .mega-menu ul, .mega-menu{
+    background-color: #efefef ;
+    opacity: 0.8;
+    
+}
+#menu .mega-menu ul li {
+ 
+  font-weight: normal;
+  text-transform: capitalize;
+  padding:5px ;
+}
+#menu .mega-menu ul li:hover, #menu .mega-menu ul li a:hover {
+    background-color: black;
+  }
+#menu .mega-menu ul li:hover a, #menu .mega-menu ul li a:hover{
+    color: white;
+  }
+#menu .mega-menu ul li a{
+  color: black ;
+  line-height: 0;  
+}
+
+@media screen and (max-width:700px) {
+    nav#menu >ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    #menu >ul li {
+        text-align: center;
+        border-bottom: 0.1px solid #ccc ;
+        
+    }
+    #menu >ul> li:last-child{
+        border: none;
+    }
+    #menu ul li:hover ul {
+        display: none;
+    }
+    .dropdown::after{
+        content:none ;
+    }
+    #menu ul li:first-child{
+        display: block;
+}
+#menu > ul >li {
+    display: none;
+}
+/*sous menu de sous menu*/
+@media screen and (max-width: 1250px){
+#menu ul li:nth-child(3) ul ul {left:-240px;} 
+}

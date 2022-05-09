@@ -1,0 +1,45 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.container{
+    height: 100vh;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    
+}
+.container>header,.container footer{
+    padding: 20px;
+}
+header{
+    background-color:green ;
+}
+.content{
+    background-color: brown;
+    padding-bottom: 60vh;
+}
+aside{
+    background-color: orange;
+}
+footer{
+    background-color: blue;
+}
+@media screen and (min-width:800px){
+    main{
+        display: flex;
+        
+
+    }
+    .content{
+        flex: 3;
+        
+    }
+    aside {
+        flex:1
+
+    }
+}
